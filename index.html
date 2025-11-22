@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <head>
     <title>Scanner</title>
@@ -21,7 +22,7 @@
 
     <script>
         const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwE8_2c1es0bBRBY4j-P_UNzBH7qAarKayVRhoICInROtjh9DKCItVJXJ25R4pJ_cpoZQ/exec"; // GANTI NANTI
-
+    navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } })
         function onScanSuccess(result) {
             const mode = document.getElementById("mode").value;
             fetch(WEB_APP_URL, {
